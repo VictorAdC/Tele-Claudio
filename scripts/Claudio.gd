@@ -10,9 +10,11 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_right") && !Input.is_action_pressed("ui_left"):
 		motion.x += SPEED
 		animation.play("run")
-	if Input.is_action_pressed("ui_left") && !Input.is_action_pressed("ui_right"):
+		animation.flip_h = false
+	elif Input.is_action_pressed("ui_left") && !Input.is_action_pressed("ui_right"):
 		motion.x -= SPEED
 		animation.play("run")
+		animation.flip_h = true
 	else:
 		animation.play("idle")
 
