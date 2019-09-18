@@ -29,6 +29,7 @@ extents = Vector2( 26.944, 33 )
 
 [node name="Claudio" type="KinematicBody2D"]
 position = Vector2( 109.846, 61.8579 )
+collision_mask = 2
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
