@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://sprites/tiles/platformPack_tile001.png" type="Texture" id=1]
+[ext_resource path="res://sprites/tiles/platformPack_tile013.png" type="Texture" id=2]
+[ext_resource path="res://sprites/tiles/platformPack_tile002.png" type="Texture" id=3]
+[ext_resource path="res://sprites/tiles/platformPack_tile014.png" type="Texture" id=4]
+[ext_resource path="res://sprites/tiles/platformPack_tile003.png" type="Texture" id=5]
+[ext_resource path="res://sprites/tiles/platformPack_tile015.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32.0086, 32.0263 )
+
+[node name="Platforms" type="Node2D"]
+
+[node name="Platform Ground Grass" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 162.183, 123.765 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform Ground Grass"]
+editor/display_folded = true
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform Ground Grass/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Platform Rock Grass" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 248.448, 123.765 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform Rock Grass"]
+editor/display_folded = true
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform Rock Grass/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Platform Ground Sand" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 163.375, 203.358 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform Ground Sand"]
+editor/display_folded = true
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform Ground Sand/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Platform Rock Sand" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 249.64, 203.358 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform Rock Sand"]
+editor/display_folded = true
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform Rock Sand/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Platform Ground Snow" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 163.793, 284.056 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform Ground Snow"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform Ground Snow/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Platform Rock Snow" type="Sprite" parent="."]
+position = Vector2( 250.058, 284.056 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform Rock Snow"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform Rock Snow/StaticBody2D"]
+shape = SubResource( 1 )
